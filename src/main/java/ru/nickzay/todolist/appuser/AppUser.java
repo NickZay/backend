@@ -26,20 +26,13 @@ public class AppUser {
     )
     private Long id;
     private String username;
-    private String email;
     private String password;
-    @Enumerated(EnumType.STRING)
-    private AppUserRole appUserRole;
     private Boolean locked = false;
     private Boolean enabled = false;
 
     public AppUser(String username,
-                   String email,
-                   String password,
-                   AppUserRole appUserRole) {
+                   String password) {
         this.username = username;
-        this.email = email;
         this.password = password;
-        this.appUserRole = appUserRole;
     }
 }
