@@ -10,5 +10,5 @@ import java.util.List;
 @Repository
 @Transactional(readOnly = true)
 public interface TodoRepository extends JpaRepository<Todo, Long> {
-    List<Todo> findByAppUser(AppUser appUser);
+    List<Todo> findByAppUserOrderByCreatedAt(AppUser appUser);
 }

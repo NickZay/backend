@@ -29,6 +29,9 @@ public class Todo {
     private String task;
 
     @Column(nullable = false)
+    private Boolean completed;
+
+    @Column(nullable = false)
     private LocalDateTime createdAt;
 
     @Column(nullable = false)
@@ -42,10 +45,12 @@ public class Todo {
     private AppUser appUser;
 
     public Todo(String task,
+                Boolean completed,
                 LocalDateTime createdAt,
                 LocalDateTime updatedAt,
                 AppUser appUser) {
         this.task = task;
+        this.completed = completed;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
         this.appUser = appUser;

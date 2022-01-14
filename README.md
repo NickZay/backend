@@ -4,11 +4,10 @@ Backend system written with Spring Boot.
 
 ### CURL example
 ```
-curl -X POST 'localhost:8080/registration' \
+curl -vv --user user1:user1Pass -X POST 'http://localhost:8080/registration' \
 -H 'Content-Type: application/json' \
---data-raw '{
-    "username": "Nickzay",
-    "email": "zaitsev.ni@phystech.edu",
-    "password": "password"
+--data '{ \
+    "username": "Nickzay", \
+    "password": "password" \
 }'
 ```
